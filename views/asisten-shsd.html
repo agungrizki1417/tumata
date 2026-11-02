@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asisten SHSD — Sistem Pengelolaan Kebutuhan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <link rel="stylesheet" href="../assets/style/sidebar.css">
+  <link rel="stylesheet" href="../assets/style/header.css">
+  
+  <link rel="stylesheet" href="../assets/style/asisten-shsd.css">
+</head>
+
+<body class="app-body">
+
+  <div id="sidebar-container"></div>
+
+  <div id="main-container" class="app-main-container">
+
+    <div id="header-container"></div>
+
+    <main class="app-content">
+
+      
+      <section class="page-header-bar">
+        <nav class="header-breadcrumb">
+          <a href="../../views/dashboard.html" class="breadcrumb-link">
+            <span data-icon="home"></span>
+            <span>Home</span>
+          </a>
+          <span class="breadcrumb-separator" data-icon="chevron-right"></span>
+          <span class="breadcrumb-current">Asisten SHSD</span>
+        </nav>
+      </section>
+
+      
+      <div class="page-content-wrapper">
+        
+        <section class="asisten-chat-card">
+
+          
+          <div class="asisten-chat-header border-bottom">
+            <div>
+              <h2 class="section-title">Asisten Pencarian SHSD</h2>
+            </div>
+            <button type="button" class="btn-secondary-sm" id="btn-reset-chat" title="Mulai Percakapan Baru">
+              Reset Sesi
+            </button>
+          </div>
+
+          
+          <div class="asisten-chat-messages" id="chat-messages-container">
+
+            
+            <div class="chat-message asisten">
+              <div class="chat-avatar">Aspri</div>
+              <div class="chat-bubble">
+                Silakan, gan. Sampaikan saja barang atau jasa yang sedang agan butuhkan.
+                Nanti saya bantu carikan yang paling sesuai dari database SHSD resmi.
+              </div>
+            </div>
+
+          </div>
+
+          
+          <div class="asisten-chat-input-area border-top">
+            <input type="text" class="asisten-chat-input" id="user-input-msg"
+              placeholder="Ketik kebutuhan barang/jasa Anda di sini...">
+            <button type="button" class="btn-page active" id="btn-send-msg"
+              style="padding: 0.5rem 1rem; border-radius: var(--radius-md);">
+              Kirim
+            </button>
+          </div>
+
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../script/core/supabase-client.js"></script>
+  <script src="../script/app/icons.js"></script>
+  <script src="../script/app/app.js"></script>
+  <script src="../script/auth/auth.js"></script>
+  <script src="../script/pages/asisten-shsd.js"></script>
+</body>
+
+</html>

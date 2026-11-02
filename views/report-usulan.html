@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laporan Usulan Kebutuhan — Sistem Pengelolaan Kebutuhan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <link rel="stylesheet" href="../assets/style/sidebar.css">
+  <link rel="stylesheet" href="../assets/style/header.css">
+  
+  <link rel="stylesheet" href="../assets/style/selecton.css">
+  
+  <link rel="stylesheet" href="../assets/style/report-usulan.css">
+</head>
+
+<body class="app-body">
+
+  <div id="sidebar-container"></div>
+
+  <div id="main-container" class="app-main-container">
+
+    <div id="header-container"></div>
+
+    <main class="app-content">
+
+      
+      <section class="page-header-bar">
+        <nav class="header-breadcrumb">
+          <a href="../../views/dashboard.html" class="breadcrumb-link">
+            <span data-icon="home"></span>
+            <span>Home</span>
+          </a>
+          <span class="breadcrumb-separator" data-icon="chevron-right"></span>
+          <span class="breadcrumb-link">Laporan</span>
+          <span class="breadcrumb-separator" data-icon="chevron-right"></span>
+          <span class="breadcrumb-current">Laporan Usulan</span>
+        </nav>
+      </section>
+
+      
+      <div class="page-content-wrapper">
+        
+        
+        <section class="card form-section-card">
+          <div class="card-header border-bottom">
+            <div>
+              <h2 class="section-title">Kontrol Cetak Laporan Usulan</h2>
+              <p class="section-subtitle">Pilih format dokumen, rentang periode, dan pejabat penandatangan sebelum mencetak laporan.</p>
+            </div>
+          </div>
+
+          <div class="card-body form-stack">
+            
+            
+            <div class="form-group">
+              <label class="form-label">Format Dokumen Laporan</label>
+              <div id="selecton-format-laporan"></div>
+              <input type="hidden" id="format-laporan-value" value="RUK">
+            </div>
+
+            
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Jenis Periode</label>
+                <div id="selecton-tipe-periode"></div>
+                <input type="hidden" id="tipe-periode-value" value="tahun">
+              </div>
+
+              
+              <div class="form-group" id="container-bulan" style="display: none;">
+                <label class="form-label">Pilih Bulan</label>
+                <div id="selecton-pilih-bulan"></div>
+                <input type="hidden" id="pilih-bulan-value" value="1">
+              </div>
+
+              
+              <div class="form-group" id="container-tahun">
+                <label class="form-label">Tahun Anggaran</label>
+                <div id="selecton-pilih-tahun"></div>
+                <input type="hidden" id="pilih-tahun-value" value="2026">
+              </div>
+            </div>
+
+            
+            <div class="form-grid-2 border-top" style="padding-top: 1rem; margin-top: 0.5rem;">
+              <div class="form-group">
+                <label for="nama-pejabat" class="form-label">Nama Pejabat Penandatangan</label>
+                <input type="text" id="nama-pejabat" class="form-input" placeholder="Masukkan nama pejabat beserta gelar...">
+              </div>
+            </div>
+
+          </div>
+
+          
+          <div class="card-footer border-top form-bottom-actions">
+            <button type="button" id="btn-reset-filter" class="btn-secondary-sm">Reset Pilihan</button>
+            <button type="button" id="btn-cetak-pdf" class="btn-secondary-sm" style="background-color: var(--color-brand); color: #fff; border: none;">
+              <span data-icon="laporan"></span>
+              Cetak Dokumen (PDF)
+            </button>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../script/core/supabase-client.js"></script>
+  <script src="../script/app/icons.js"></script>
+  <script src="../script/app/app.js"></script>
+  <script src="../script/auth/auth.js"></script>
+  <script src="../script/app/selecton.js"></script>
+  <script src="../script/pages/report-usulan.js"></script>
+</body>
+
+</html>

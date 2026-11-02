@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Pengusulan Kebutuhan — Sistem Pengelolaan Kebutuhan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <link rel="stylesheet" href="../assets/style/sidebar.css">
+  <link rel="stylesheet" href="../assets/style/header.css">
+  <link rel="stylesheet" href="../assets/style/daftar-usulan.css">
+  <link rel="stylesheet" href="../assets/style/table.css">
+  <link rel="stylesheet" href="../assets/style/modal.css">
+</head>
+
+<body class="app-body">
+
+  <div id="sidebar-container"></div>
+
+  <div id="main-container" class="app-main-container">
+
+    <div id="header-container"></div>
+
+    <main class="app-content">
+
+      
+      <section class="page-header-bar" style="display: flex; align-items: center; justify-content: space-between;">
+        <nav class="header-breadcrumb">
+          <a href="../../views/dashboard.html" class="breadcrumb-link">
+            <span data-icon="home"></span>
+            <span>Home</span>
+          </a>
+          <span class="breadcrumb-separator" data-icon="chevron-right"></span>
+          <span class="breadcrumb-current">Daftar Usulan</span>
+        </nav>
+      </section>
+
+      
+      <div class="page-content-wrapper">
+        <div id="tabel-daftar-usulan-container"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../script/core/supabase-client.js"></script>
+  <script src="../script/app/icons.js"></script>
+  <script src="../script/app/app.js"></script>
+  <script src="../script/auth/auth.js"></script>
+  <script src="../script/app/table-builder.js"></script>
+  <script src="../script/app/modal-builder.js"></script>
+  <script src="../script/pages/daftar-usulan.js"></script>
+</body>
+
+</html>

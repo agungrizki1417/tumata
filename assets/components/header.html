@@ -1,0 +1,52 @@
+<header class="app-header">
+  
+  <div class="header-left-group">
+    <button id="sidebar-toggle" type="button" title="Ciutkan/Buka Sidebar" class="header-toggle-btn"
+      aria-controls="main-sidebar" aria-expanded="true">
+      <span id="toggle-icon-open" data-icon="toggle-open"></span>
+      <span id="toggle-icon-collapsed" class="sidebar-toggle-icon-hidden" data-icon="toggle-collapsed"></span>
+    </button>
+  </div>
+
+  
+  <div class="header-actions">
+    
+    <div class="header-search-box">
+      <input type="text" placeholder="Cari nomor usulan, unit..." class="header-search-input">
+      <span class="header-search-icon" data-icon="search"></span>
+    </div>
+
+    <div class="header-divider"></div>
+
+    
+    <button class="header-notification-btn" title="Pemberitahuan">
+      <span data-icon="bell"></span>
+      <span class="header-notification-dot"></span>
+    </button>
+
+    
+    <div class="header-user-dropdown-wrapper">
+      <button type="button" class="header-user-pill" id="user-menu-btn" aria-expanded="false" aria-haspopup="true">
+        <div class="header-avatar" id="header-user-avatar">--</div>
+        <div class="header-user-info">
+          <span class="header-user-name" id="header-user-name">Memuat...</span>
+          <span class="header-user-role" id="header-user-role">Pegawai</span>
+        </div>
+        <span class="header-dropdown-chevron" data-icon="chevron-down"></span>
+      </button>
+
+      
+      <div class="header-dropdown-menu" id="user-dropdown-menu">
+        <a href="#" id="menu-reset-password" class="dropdown-item">
+          <span data-icon="key" class="dropdown-item-icon"></span>
+          <span>Reset Kata Sandi</span>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" id="menu-logout" class="dropdown-item dropdown-item-danger">
+          <span data-icon="logout" class="dropdown-item-icon"></span>
+          <span>Keluar Sistem</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>

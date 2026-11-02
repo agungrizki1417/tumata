@@ -1,0 +1,242 @@
+.usulan-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.form-section-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.618rem; 
+  width: 100%;
+}
+
+
+.form-label {
+  width: 220px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+
+.form-group.textarea-group {
+  align-items: flex-start;
+}
+
+.form-group.textarea-group .form-label {
+  padding-top: 0.625rem;
+}
+
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  max-width: 560px; 
+  padding: 0.625rem 0.875rem;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 3px rgba(36, 95, 115, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.readonly-input {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.5;
+}
+
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.form-group-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-input-sm {
+  width: 100%;
+  padding: 0.5rem 0.625rem;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-input-sm:focus {
+  border-color: var(--color-brand);
+}
+
+.form-input-sm::placeholder {
+  color: var(--color-text-muted);
+}
+
+
+.btn-primary-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-brand);
+  border: 1px solid var(--color-brand-dark);
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-surface-white);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.15s;
+}
+
+.btn-primary-sm:hover {
+  background-color: var(--color-brand-dark);
+}
+
+.form-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+
+.form-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 0.5rem;
+}
+
+
+.usulan-form-container.card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.form-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+.form-section-block:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.form-section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+
+input:disabled,
+input.readonly-input,
+textarea:disabled,
+textarea.readonly-input {
+  background-color: var(--color-bg-subtle, #F8FAFC);
+  color: var(--color-text-muted, #8D99A5);
+  cursor: not-allowed;
+  border-color: var(--color-border, #E2E5E8);
+  opacity: 1; 
+}
+
+
+.form-master-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+
+
+.form-master-wrapper .card.form-section-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  box-shadow: none; 
+}
+
+
+.form-master-wrapper .form-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk — Sistem Pengelolaan Kebutuhan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/style/login.css">
+</head>
+
+<body class="login-body">
+  <div class="login-container">
+    <div class="login-hero-side">
+    </div>
+    <div class="login-form-side">
+      <div class="login-card-wrapper">
+
+        <div class="login-header">
+          <img src="assets/images/brand-biru.webp" alt="Logo Brand" class="login-brand-logo">
+          <h1 class="login-title">Sugeng Rawuh</h1>
+          <p class="login-subtitle">Silakan login untuk usul, belanja, atau distribusi.</p>
+        </div>
+
+        <form id="form-login" class="login-form">
+
+          
+          <div class="login-field-group">
+            <label for="username" class="login-label">Nama Pengguna / Email</label>
+            <div class="input-with-icon">
+              <span class="input-icon" data-icon="fingerprint"></span>
+              <input type="text" id="username" name="username" class="login-input"
+                placeholder="Masukkan username atau email" required autocomplete="username">
+            </div>
+          </div>
+
+          
+          <div class="login-field-group">
+            <label for="password" class="login-label">Kata Sandi</label>
+            <div class="input-with-icon">
+              <span class="input-icon" data-icon="lock"></span>
+              <input type="password" id="password" name="password" class="login-input" placeholder="Masukkan kata sandi"
+                required autocomplete="current-password">
+            </div>
+          </div>
+
+          <div class="login-field-group">
+            <label for="login-year" class="login-label">Tahun Anggaran</label>
+            <div class="input-with-icon">
+              <span class="input-icon" data-icon="calendar"></span>
+              <select id="login-year" name="login-year" class="login-input" required>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027" selected>2027</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="login-options-row">
+            <label class="checkbox-container">
+              <input type="checkbox" id="remember-me" name="remember-me">
+              <span class="checkbox-checkmark"></span>
+              <span class="checkbox-label">Simpan kata sandi</span>
+            </label>
+            <a href="#" class="forgot-password-link">Lupa kata sandi?</a>
+          </div>
+
+          <button type="submit" class="btn-login-submit">
+            <span>Masuk ke Sistem</span>
+            <span data-icon="arrow-right"></span>
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./script/core/supabase-client.js"></script>
+  <script src="./script/auth/auth.js"></script>
+
+  <script src="script/app/icons.js"></script>
+</body>
+
+</html>

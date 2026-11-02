@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry Pengusulan Kebutuhan — Sistem Pengelolaan Kebutuhan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.bootstrap5.min.css">
+
+  <link rel="stylesheet" href="../assets/style/style.css">
+  <link rel="stylesheet" href="../assets/style/sidebar.css">
+  <link rel="stylesheet" href="../assets/style/header.css">
+  <link rel="stylesheet" href="../assets/style/selecton.css">
+  <link rel="stylesheet" href="../assets/style/usulan.css">
+</head>
+
+<body class="app-body">
+
+  <div id="sidebar-container"></div>
+
+  <div id="main-container" class="app-main-container">
+
+    <div id="header-container"></div>
+
+    <main class="app-content">
+
+      <section class="page-header-bar">
+        <nav class="header-breadcrumb">
+          <a href="../../views/dashboard.html" class="breadcrumb-link">
+            <span data-icon="home"></span>
+            <span>Home</span>
+          </a>
+          <span class="breadcrumb-separator" data-icon="chevron-right"></span>
+          <span class="breadcrumb-current">Pengusulan Kebutuhan</span>
+        </nav>
+      </section>
+
+      <form id="form-usulan" class="usulan-form-container">
+
+        
+        <div class="form-master-wrapper">
+
+          
+          <section class="card form-section-card">
+            <div class="card-header border-bottom">
+              <div>
+                <h2 class="section-title">Informasi Pengajuan</h2>
+                <p class="section-subtitle">Data rujukan dan entitas pemohon pengajuan kebutuhan.</p>
+              </div>
+            </div>
+            <div class="card-body form-stack">
+              <div class="form-group">
+                <label for="nomor-dokumen" class="form-label">Nomor Dokumen (Estimasi)</label>
+                <input type="text" id="nomor-dokumen" class="form-input readonly-input" readonly
+                  placeholder="Memuat nomor...">
+              </div>
+
+              <div class="form-group">
+                <label for="tanggal-pengajuan" class="form-label">Tanggal Pengajuan</label>
+                <input type="date" id="tanggal-pengajuan" class="form-input">
+              </div>
+
+              <div class="form-group">
+                <label for="klaster" class="form-label">Klaster Kebutuhan</label>
+                <div id="klaster-container"></div>
+                <input type="hidden" id="klaster-value" name="klaster_id" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Unit Sasaran</label>
+                <div id="unit-sasaran-container"></div>
+                <input type="hidden" id="unit-sasaran-value" name="ruang_tujuan_id">
+              </div>
+            </div>
+          </section>
+
+          
+          <section class="card form-section-card">
+            <div class="card-header border-bottom">
+              <div>
+                <h2 class="section-title">Detail Kebutuhan</h2>
+                <p class="section-subtitle">Rincian spesifikasi, kuantitas, dan estimasi biaya barang/jasa.</p>
+              </div>
+            </div>
+            <div class="card-body form-stack">
+              <div class="form-group">
+                <label class="form-label">Nama Barang / Jasa</label>
+                <div id="barang-jasa-container"></div>
+                <input type="hidden" id="barang-value" name="nama_barang">
+              </div>
+
+              <div class="form-group">
+                <label for="spesifikasi" class="form-label">Spesifikasi SHSD</label>
+                <input type="text" id="spesifikasi" class="form-input readonly-input"
+                  placeholder="-">
+              </div>
+
+              <div class="form-group">
+                <label for="kuantitas" class="form-label">Kuantitas</label>
+                <input type="number" id="kuantitas" class="form-input" min="1" placeholder="0">
+              </div>
+
+              <div class="form-group">
+                <label for="satuan" class="form-label">Satuan</label>
+                <input type="text" id="satuan" class="form-input readonly-input"
+                  placeholder="-">
+              </div>
+
+              <div class="form-group">
+                <label for="harga-satuan" class="form-label">Harga Satuan (Rp)</label>
+                <input type="number" id="harga-satuan" class="form-input readonly-input" placeholder="-">
+              </div>
+
+              <div class="form-group">
+                <label for="total-nominal" class="form-label">Total Nominal (Rp)</label>
+                <input type="text" id="total-nominal" class="form-input readonly-input" value="Rp0" readonly>
+              </div>
+            </div>
+          </section>
+
+          
+          <section class="card form-section-card">
+            <div class="card-header border-bottom">
+              <div>
+                <h2 class="section-title">Justifikasi dan Dokumen Pendukung</h2>
+                <p class="section-subtitle">Latar belakang urgensi pengajuan beserta tautan dokumen pendukung.</p>
+              </div>
+            </div>
+            <div class="card-body form-stack">
+              <div class="form-group">
+                <label for="catatan-pengusul" class="form-label">Alasan Pengajuan</label>
+                <textarea id="catatan-pengusul" class="form-textarea" rows="4"
+                  placeholder="-"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="link-referensi" class="form-label">Link Referensi Barang/Jasa</label>
+                <input type="url" id="link-referensi" class="form-input"
+                  placeholder="-">
+              </div>
+            </div>
+          </section>
+
+          
+          <section class="card form-section-card">
+            <div class="card-header border-bottom">
+              <div>
+                <h2 class="section-title">Periode Kebutuhan</h2>
+                <p class="section-subtitle">Estimasi alokasi kebutuhan unit kerja selama 12 bulan berjalan.</p>
+              </div>
+              <button type="button" id="btn-bagi-rata" class="btn-secondary-sm">
+                Bagi Rata
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="month-grid">
+                <div class="form-group-sm">
+                  <input type="number" id="bln-januari" class="form-input-sm" placeholder="Januari" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-februari" class="form-input-sm" placeholder="Februari" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-maret" class="form-input-sm" placeholder="Maret" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-april" class="form-input-sm" placeholder="April" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-mei" class="form-input-sm" placeholder="Mei" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-juni" class="form-input-sm" placeholder="Juni" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-juli" class="form-input-sm" placeholder="Juli" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-agustus" class="form-input-sm" placeholder="Agustus" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-september" class="form-input-sm" placeholder="September" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-oktober" class="form-input-sm" placeholder="Oktober" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-november" class="form-input-sm" placeholder="November" min="0">
+                </div>
+                <div class="form-group-sm">
+                  <input type="number" id="bln-desember" class="form-input-sm" placeholder="Desember" min="0">
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+          <div class="form-bottom-actions">
+            <button type="button" id="btn-bersihkan" class="btn-secondary-sm">Bersihkan</button>
+            <button type="submit" id="btn-kirim-usulan" class="btn-primary-sm">Simpan Pengajuan</button>
+          </div>
+
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/id.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../script/core/supabase-client.js"></script>
+  <script src="../script/app/icons.js"></script>
+  <script src="../script/app/app.js"></script>
+  <script src="../script/auth/auth.js"></script>
+  <script src="../script/app/selecton.js"></script>
+  <script src="../script/pages/usulan.js"></script>
+</body>
+
+</html>

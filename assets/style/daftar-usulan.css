@@ -1,0 +1,21 @@
+
+.btn-icon-square svg,
+.btn-icon-square [data-icon] svg {
+  width: 1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  display: block;
+}
+
+.badge-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--status-bg, #F1F5F9);
+  color: var(--status-color, #475569);
+}

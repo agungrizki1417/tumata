@@ -1,0 +1,101 @@
+.global-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(26, 36, 43, 0.5); 
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.global-modal-backdrop.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.global-modal-container {
+  background-color: var(--color-surface-white, #FFFFFF);
+  border: 1px solid var(--color-border, #E2E5E8);
+  border-radius: var(--radius-lg, 8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 560px; 
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(8px);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.global-modal-backdrop.is-active .global-modal-container {
+  transform: translateY(0);
+}
+
+
+.global-modal-container.modal-sm { max-width: 400px; }
+.global-modal-container.modal-lg { max-width: 800px; }
+.global-modal-container.modal-xl { max-width: 1040px; }
+
+
+.global-modal-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border, #E2E5E8);
+  background-color: var(--color-bg-subtle, #F8FAFC);
+}
+
+.global-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary, #1A242B);
+  letter-spacing: -0.01em;
+}
+
+
+.global-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary, #5F6B76);
+  cursor: pointer;
+  padding: 0.375rem;
+  border-radius: var(--radius-md, 6px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.global-modal-close:hover {
+  background-color: #E2E8F0;
+  color: var(--color-text-primary, #1A242B);
+}
+
+
+.global-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 13px;
+  color: var(--color-text-primary, #1A242B);
+  line-height: 1.5;
+}
+
+
+.global-modal-footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-bg-subtle, #F8FAFC);
+  border-top: 1px solid var(--color-border, #E2E5E8);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}

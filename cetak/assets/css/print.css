@@ -1,0 +1,56 @@
+/* ==========================================================================
+   PRINT STYLESHEET (A4, Margin 2.5cm, Portrait & Landscape)
+   ========================================================================== */
+
+
+@page {
+  size: A4 portrait; 
+  margin: 2.5cm;
+}
+
+
+@page landscape {
+  size: A4 landscape;
+  margin: 2.5cm;
+}
+
+.page-landscape {
+  page: landscape;
+}
+
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12pt;
+  color: #1A242B;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+
+.sheet {
+  background: white;
+  width: 100%;
+}
+
+
+.page-break {
+  page-break-after: always;
+}
+
+.avoid-break {
+  page-break-inside: avoid;
+}
+
+
+.no-print {
+  display: none !important;
+}
