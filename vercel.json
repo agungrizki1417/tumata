@@ -1,28 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/dashboard",
-      "destination": "/views/dashboard.html"
-    },
-    {
-      "source": "/usulan",
-      "destination": "/views/usulan.html"
-    },
-    {
-      "source": "/daftar-usulan",
-      "destination": "/views/daftar-usulan.html"
-    },
-    {
-      "source": "/verifikasi-usulan",
-      "destination": "/views/verifikasi-usulan.html"
-    },
-    {
-      "source": "/report-usulan",
-      "destination": "/views/report-usulan.html"
-    },
-    {
-      "source": "/asisten-shsd",
-      "destination": "/views/asisten-shsd.html"
-    }
-  ]
+  "cleanUrls": true
 }
